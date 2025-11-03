@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+:root {
+    --main-dark-color: #4a2e2c;
+    --main-light-color: #ffffff;
+    --second-dark-color: #6f513a;
+    --third-dark-color: #916a53;
+}
+
+* {
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    background-color: var(--main-dark-color);
+    color: var(--main-light-color);
+}
+
+body > * {
+    padding: 30px 100px;
+}
+
+body > section {
+    background-color: var(--main-light-color);
+    color: var(--main-dark-color);
+}
+
+body > section:first-of-type {
+    border-radius: 30px 30px 0 0;
+}
+
+body > section:last-of-type {
+    border-radius: 0 0 30px 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+button, input[type="submit"] {
+    background-color: var(--main-dark-color);
+    color: var(--main-light-color);
+    
+    border: none;
+    border-radius: 30px;
+
+    font-size: 1rem;
+    padding: 10px 50px;
+
+    transition: scale 0.2s;
+
+    min-width: 200px;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: var(--second-dark-color);
+    scale: 1.01;
+}
+
+button:active, input[type="submit"]:active {
+    background-color: var(--third-dark-color);
+    scale: 1.05;
+}
+
+form {
+    display: block;
+    width: 100%;
+}
+
+input {
+    border: 2px solid var(--main-dark-color);
+    border-radius: 30px;
+
+    display: block;
+    min-width: 100%;
+    font-size: 1rem;
+
+    margin: 1rem 0;
+    padding: 10px 30px;
+}
+
+.gradient-img {
+    background: linear-gradient(var(--gradient-img__gradient-direction, 90deg), var(--main-light-color) 50%, rgba(255, 255, 255, 0)),
+                var(--gradient-img__image-url),
+                var(--main-light-color);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.gradient-img-left {
+    --gradient-img__gradient-direction: 270deg;
+    background-position: left;
+    padding-left: calc(50% + 50px);
+}
+
+.gradient-img-right {
+    --gradient-img__gradient-direction: 90deg;
+    background-position: right;
+    padding-right: calc(50% + 50px);
+}
+
+/* ----------------------- Header and Footer ------------------------ */
+
+header, .supreme-header-elements, footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+header a, footer a {
+    color: var(--main-light-color);
+    text-decoration: none;
+}
+
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo-group > img {
+    height: 60px;
+}
+
+.logo-group-text > h1, .logo-group-text > span {
+    line-height: 1;
+}
+
+#burger-menu-button {
+    display: none;
+}
+
+nav, .footer-links {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+nav a:hover, .footer-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* -------------------------- Hero Section -------------------------- */
+
+#hero-section {
+    --gradient-img__image-url: url("https://images.unsplash.com/photo-1739991892137-6c0d8d242662");
+    min-height: 80vh;
+}
+
+/* ------------------------ Features Section ------------------------ */
+
+.img-blocks-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 100px;
+
+    padding: 30px 0;
+}
+
+.img-block {
+    display: grid;
+    grid-template-columns: 4fr 6fr;
+    gap: 30px;
+}
+
+.img-block > img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    border-radius: 30px;
+}
+
+.img-block-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* ---------------------- How It Works Section ---------------------- */
+
+iframe[title="YouTube video player"] {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+/* ------------------------ Pricing Section ------------------------- */
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+
+    padding: 30px 0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    padding: 50px;
+
+    border: none;
+    border-radius: 30px;
+
+    box-shadow: 0 0 100px 0 var(--main-dark-color);
+}
+
+.card > h3 {
+    font-size: 3rem;
+}
+
+.card > span {
+    font-size: 2rem;
+    margin-bottom: 50px;
+}
+
+/* ---------------- Newsletter Subscription Section ----------------- */
+
+#newsletter-subscription {
+    --gradient-img__image-url: url("https://images.unsplash.com/photo-1510682999913-847a6d3cf221");
+    min-height: 80vh;
+}
+
+/* ----------------------- Responsive Design ------------------------ */
+
+@media only screen and (max-width: 1400px) {
+    .img-blocks-container {
+        gap: 50px 50px;
+        padding: 30px 0;
+    }
+    
+    .card {
+        padding: 50px 30px;
+    }
+    
+    .card > h3 {
+        font-size: 2.5rem;
+    }
+
+    .card > span {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .card > h3 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .img-blocks-container {
+        gap: 30px 50px;
+    }
+
+    .cards-container {
+        gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    nav, .footer-links {
+        gap: 30px;
+    }
+
+    .img-blocks-container, .cards-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    .card > span {
+        margin-bottom: 0;
+    }
+
+    .card > p {
+        margin: 0.5rem 0;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .gradient-img {
+        background: linear-gradient(var(--gradient-img__gradient-direction, 90deg), var(--main-light-color) 35%, rgba(255, 255, 255, 0)),
+                    var(--gradient-img__image-url),
+                    var(--main-light-color);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        
+        justify-content: flex-end;
+    }
+
+    .gradient-img-left, .gradient-img-right {
+        --gradient-img__gradient-direction: 0;
+        padding: 30px 100px;
+    }
+
+    .gradient-img-left {
+        background-position: top left;
+    }
+
+    .gradient-img-right {
+        background-position: top right;
+    }
+
+    header, footer {
+        display: block;
+    }
+
+    .supreme-header-elements {
+        width: 100%;
+    }
+
+    #burger-menu-button {
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 0 10px;
+
+        display: unset;
+    }
+
+    nav {
+        display: none;
+        margin-top: 30px;
+    }
+
+    nav, .footer-links {
+        gap: 50px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body > *, .gradient-img-left, .gradient-img-right {
+        padding: 30px 50px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .gradient-img {
+        background: linear-gradient(var(--gradient-img__gradient-direction, 90deg), var(--main-light-color) 35%, rgba(255, 255, 255, 0)),
+                    var(--gradient-img__image-url),
+                    var(--main-light-color);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        
+        justify-content: flex-end;
+    }
+
+    .gradient-img-left {
+        background-position: top left;
+    }
+
+    .gradient-img-right {
+        background-position: top right;
+    }
+
+    .logo-group-text > h1 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    nav, .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body > *, .gradient-img-left, .gradient-img-right {
+        padding: 30px;
+    }
+
+    .img-blocks-container {
+        gap: 40px;
+    }
+
+    .img-block {        
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+}

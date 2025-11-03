@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #c8efff;
+}
+
+main {
+    width: 80vw;
+    margin: 50px auto;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    box-shadow: 0 0 50px 0 #96b4c0;
+    border-radius: 10px;
+}
+
+fieldset {
+    margin: 25px 0;
+    padding: 20px;
+    border: 1.5px solid #a4c5d2;
+    border-radius: 6px;
+}
+
+fieldset > fieldset:first-of-type {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+}
+
+input, select, textarea {
+    display: block;
+    width: 50%;
+    height: 2.5rem;
+    margin: 10px 0 25px 0;
+    padding: 0 10px;
+    background-color: #ffffff;
+    border: 1.5px solid #a4c5d2;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    display: inline;
+    width: unset;
+    height: unset;
+    margin: 10px 5px 10px 0;
+    vertical-align: middle;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+}
+
+input[type="submit"] {
+    width: 30%;
+    background-color: #59a0bc;
+    color: #ffffff;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #68b8d8;
+}
+
+input[type="submit"]:active {
+    background-color: #73cef2;
+}
+
+@media only screen and (max-width: 1300px) {
+    input, select, textarea {
+        width: 70%;
+    }
+    
+    textarea {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    input, select, textarea {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        width: 85vw;
+        margin: 40px auto;
+        padding: 20px 30px;
+    }
+}

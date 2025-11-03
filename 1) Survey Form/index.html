@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Survey Form</title>
+    </head>
+    <body>
+        <main>
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Thank you for taking the time to help us improve our products and services</p>
+            <form method="post" action="https://www.freecodecamp.org/" id="survey-form">
+                <fieldset>
+                    <legend>Demographic information</legend>
+
+                    <label for="name" id="name-label">
+                        Name:
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </label>
+
+                    <label for="email" id="email-label">
+                        Email:
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </label>
+
+                    <label for="age" id="number-label">
+                        Age:
+                        <input type="number" min="18" max="120" id="number" name="age" placeholder="Enter your age" required>
+                    </label>
+
+                    <label for="dropdown">
+                        Employment status:
+                        <select id="dropdown" name="employment-status" required>
+                            <option value disabled selected>Select your employment status</option>
+                            <option value="employed-full-time">Employed full-time</option>
+                            <option value="employed-part-time">Employed part-time</option>
+                            <option value="self-employed">Self-employed</option>
+                            <option value="unemployed">Unemployed</option>
+                            <option value="student">Student</option>
+                            <option value="retired">Retired</option>
+                            <option value="homemaker">Homemaker</option>
+                            <option value="unable-to-work">Unable to work</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Customer Insights</legend>
+
+                    <fieldset>
+                        <legend>How satisfied are you with our products and services?</legend>
+
+                        <label for="satisfaction-very-dissatisfied">
+                            <input type="radio" id="satisfaction-very-dissatisfied" name="satisfaction" value="-2">
+                            very dissatisfied
+                        </label>
+                        
+                        <label for="satisfaction-somewhat-dissatisfied">
+                            <input type="radio" id="satisfaction-somewhat-dissatisfied" name="satisfaction" value="-1">
+                            somewhat dissatisfied
+                        </label>
+                        
+                        <label for="satisfaction-neutral">
+                            <input type="radio" id="satisfaction-neutral" name="satisfaction" value="0" checked>
+                            neutral
+                        </label>
+                        
+                        <label for="satisfaction-somewhat-satisfied">
+                            <input type="radio" id="satisfaction-somewhat-satisfied" name="satisfaction" value="1">
+                            somewhat satisfied
+                        </label>
+                        
+                        <label for="satisfaction-very-satisfied">
+                            <input type="radio" id="satisfaction-very-satisfied" name="satisfaction" value="2">
+                            very satisfied
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>What do you think we should improve in our products and services?</legend>
+
+                        <label for="improvement-suggestions-product-quality">
+                            <input type="checkbox" id="improvement-suggestions-product-quality" name="improvement-suggestions" value="product-quality">
+                            product quality
+                        </label>
+
+                        <label for="improvement-suggestions-delivery-process">
+                            <input type="checkbox" id="improvement-suggestions-delivery-process" name="improvement-suggestions" value="delivery-process">
+                            delivery process
+                        </label>
+                        
+                        <label for="improvement-suggestions-customer-support">
+                            <input type="checkbox" id="improvement-suggestions-customer-support" name="improvement-suggestions" value="customer-support">
+                            customer support
+                        </label>
+
+                        <label for="improvement-suggestions-product-range">
+                            <input type="checkbox" id="improvement-suggestions-product-range" name="improvement-suggestions" value="product-range">
+                            product range
+                        </label>
+                        
+                        <label for="improvement-suggestions-pricing">
+                            <input type="checkbox" id="improvement-suggestions-pricing" name="improvement-suggestions" value="pricing">
+                            pricing
+                        </label>
+
+                        <label for="improvement-suggestions-packaging">
+                            <input type="checkbox" id="improvement-suggestions-packaging" name="improvement-suggestions" value="packaging">
+                            packaging
+                        </label>
+                        
+                        <label for="improvement-suggestions-website-and-online-experience">
+                            <input type="checkbox" id="improvement-suggestions-website-and-online-experience" name="improvement-suggestions" value="website-and-online-experience">
+                            website and online experience
+                        </label>
+
+                        <label for="improvement-suggestions-after-sales-service">
+                            <input type="checkbox" id="improvement-suggestions-after-sales-service" name="improvement-suggestions" value="after-sales-service">
+                            after-sales service
+                        </label>
+                    </fieldset>
+
+                    <label for="comments">
+                        Do you have any additional comments or suggestions for improving our products and services?
+                        <textarea name="comments" id="comments" placeholder="Write your additional comments or suggestions"></textarea>
+                    </label>
+                </fieldset>
+
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </main>
+    </body>
+</html>

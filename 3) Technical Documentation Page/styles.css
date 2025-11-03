@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+* {
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 50px;
+    padding: 30px 50px;
+    margin: 0;
+    color: #222222;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+a {
+    color: #3567ff;
+    text-underline-offset: 6px;
+}
+
+a:active {
+    color: #668cff;
+}
+
+/* -------------------- Navigation Bar -------------------- */
+
+#show-table-of-contents, #hide-table-of-contents {
+    display: none;
+    color: #3567ff;
+    font-size: 1rem;
+    text-align: left;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+#show-table-of-contents::after {
+    content: "↓";
+    margin-left: 8px;
+}
+
+#hide-table-of-contents::after {
+    content: "↑";
+    margin-left: 8px;
+}
+
+#show-table-of-contents:hover, #hide-table-of-contents:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+#show-table-of-contents:active, #hide-table-of-contents:active {
+    color: #668cff;
+}
+
+#hide-table-of-contents {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+#table-of-contents {
+    position: sticky;
+    top: 20px;
+}
+
+#table-of-contents ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#table-of-contents ul ul {
+    padding-left: 20px;
+}
+
+#table-of-contents a {
+    text-decoration: none;
+}
+
+#table-of-contents a:hover, #table-of-contents a:active {
+    text-decoration: underline;
+}
+
+/* ------------------ Main Documentation ------------------ */
+
+code {
+    font-family: "Ubuntu Mono", monospace;
+    background-color: #e8e8e8;
+    border-radius: 3px;
+    padding: 2px 5px;
+}
+
+.scrollable-block-container {
+    width: 100%;
+    overflow-x: scroll;
+    
+    margin: 20px 0;
+}
+
+.code-block {
+    display: block;
+    width: max-content;
+    min-width: 100%;
+    white-space: nowrap;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+}
+
+table, th, td {
+  border: 1px solid #909090;
+  border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
+
+.table-cell-positive, .table-cell-negative {
+    text-align: center;
+    vertical-align: center;
+}
+
+.table-cell-positive {
+    background-color: #bdfdbe;
+    color: #2bac2d;
+}
+
+.table-cell-negative {
+    background-color: #fdbdbd;
+    color: #ac2b2b;
+}
+
+/* ------------------ Responsive Design ------------------- */
+
+@media (max-width: 1500px) {
+    body {
+        gap: 40px;
+        padding: 30px 40px;
+    }
+}
+
+@media (max-width: 1300px) {
+    body {
+        gap: 30px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        display: block;
+        padding: 30px 50px;
+    }
+
+    #show-table-of-contents {
+        display: unset;
+    }
+
+    #table-of-contents {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 350px) {
+    body {
+        padding: 20px;
+    }
+}

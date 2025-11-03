@@ -1,0 +1,114 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #151515;
+}
+
+body {
+    margin: 0;
+}
+
+main > * {
+    padding: 0 20vh;
+}
+
+h1, figure {
+    margin: 0;
+
+    background-color: #151515;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    padding: 80px 20vh 20px 20vh;
+}
+
+figure {
+    padding: 30px 20vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+figure img {
+    display: block;
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    max-height: 80vh;
+
+    object-fit: cover;
+    object-position: 50% 0%;
+
+    filter: grayscale(100%);
+}
+
+figure figcaption {
+    padding-top: 20px;
+
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+
+    color: #ffffff;
+}
+
+.text {
+    padding: 100px 20vh;
+}
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+a:hover {
+    color: #0000af;
+}
+
+a:active {
+    color: #0000ff;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1800px) {
+    main > *, h1, figure, .text {
+        padding-left: 15vh;
+        padding-right: 15vh;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    main > *, h1, figure, .text {
+        padding-left: 10vh;
+        padding-right: 10vh;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    main > *, h1, figure, .text {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    figure figcaption {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    main > *, h1, figure, .text {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    main > *, h1, figure, .text {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

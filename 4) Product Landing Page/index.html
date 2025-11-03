@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>EcoBrew</title>
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header id="header">
+            <div class="supreme-header-elements">
+                <a class="logo-group" href="#">
+                    <img id="header-img" src="https://www.clipartmax.com/png/full/112-1127141_coffee-machine-coffee-machine-icon-white.png" alt="EcoBrew Logo">
+                    <div class="logo-group-text">
+                        <h1>EcoBrew</h1>
+                        <span>Sustainable Coffee, Brewed Smarter</span>
+                    </div>
+                </a>
+
+                <span id="burger-menu-button" onclick="showAndHideNavbar()">&#9776;</span>
+            </div>
+
+            <nav id="nav-bar">
+                <a class="nav-link" href="#features">Features</a>
+                <a class="nav-link" href="#how-it-works">How It Works</a>
+                <a class="nav-link" href="#pricing">Pricing</a>
+            </nav>
+        </header>
+
+        <section id="hero-section" class="gradient-img gradient-img-right">
+            <h2>Reimagine Your Coffee Experience</h2>
+            <p>
+                EcoBrew is the eco-friendly coffee maker designed for modern coffee lovers. Save time, reduce waste, and enjoy barista-quality coffee at home.
+            </p>
+            <button>Buy Now</button>
+        </section>
+
+        <section id="features">
+            <h2>Features</h2>
+
+            <div class="img-blocks-container">
+                <div class="img-block">
+                    <img src="https://images.unsplash.com/photo-1636116305751-dd062664d4a7" alt="Photo of a plant">
+                    <div class="img-block-text">
+                        <h3>Eco-Friendly Design</h3>
+                        <p>Made with recyclable materials and designed to minimize energy usage.</p>
+                    </div>
+                </div>
+                <div class="img-block">
+                    <img src="https://images.unsplash.com/photo-1628195476195-df4b278d2b5b" alt="Photo of the coffee making process">
+                    <div class="img-block-text">
+                        <h3>Smart Brewing Technology</h3>
+                        <p>Customizable brew settings with one-touch simplicity.</p>
+                    </div>
+                </div>
+                <div class="img-block">
+                    <img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d" alt="Photo of money">
+                    <div class="img-block-text">
+                        <h3>Cost Saving</h3>
+                        <p>Save up to 40 % compared to traditional coffee pods.</p>
+                    </div>
+                </div>
+                <div class="img-block">
+                    <img src="https://images.unsplash.com/photo-1620568400263-6f1cf95b9e30" alt="Photo of a dishwasher">
+                    <div class="img-block-text">
+                        <h3>Easy to Clean</h3>
+                        <p>Dishwasher-safe parts for a hassle-free experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works">
+            <h2>How It Works</h2>
+            <p>See EcoBrew in action — brewing the perfect cup while protecting the planet.</p>
+
+            <iframe src="https://www.youtube-nocookie.com/embed/bKwsaKkLvvQ?si=hLyLd9EpXH8wWKEK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="video"></iframe>
+        </section>
+
+        <section id="pricing">
+            <h2>Pricing</h2>
+            <p>Choose Your EcoBrew Plan</p>
+
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Basic Plan</h3>
+                    <span>$ 99.99</span>
+
+                    <p>Perfect for beginners</p>
+                    <p>Includes the EcoBrew machine</p>
+                    <p>Includes a starter kit</p>
+                </div>
+                <div class="card">
+                    <h3>Pro Plan</h3>
+                    <span>$ 149.99</span>
+
+                    <p>Advanced features</p>
+                    <p>Customizable brewing profiles</p>
+                </div>
+                <div class="card">
+                    <h3>Family Plan</h3>
+                    <span>$ 199.99</span>
+
+                    <p>Best value</p>
+                    <p>Comes with extra filters</p>
+                    <p>Provides 2-year warranty</p>  
+                </div>
+            </div>
+        </section>
+
+        <section id="newsletter-subscription" class="gradient-img gradient-img-left">
+            <h2>Stay Updated & Get Exclusive Offers</h2>
+            <p>Join our newsletter and be the first to know about new features and discounts.</p>
+
+            <form method="post" action="https://www.freecodecamp.com/email-submit" id="form">
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </section>
+
+        <footer>
+            <div class="footer-links">
+                <a href="https://www.example.com">Legal Information</a>
+                <a href="https://www.example.com">Terms & Conditions</a>
+                <a href="https://www.example.com">Privacy Policy</a>
+            </div>
+
+            <p>© 2025 EcoBrew. All rights reserved.</p>
+        </footer>
+
+        <script>
+            function showAndHideNavbar () {
+                let navbarElement = document.getElementById("nav-bar");
+                let navbarDisplayValue = window.getComputedStyle(navbarElement).display;
+                
+                if (navbarDisplayValue === "none") {
+                    navbarElement.style.display = "flex";
+                } else if (navbarDisplayValue === "flex") {
+                    navbarElement.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>

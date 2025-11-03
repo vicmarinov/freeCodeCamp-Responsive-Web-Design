@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --text-dark-color: hsl(197, 100%, 15%);
+    --text-light-color: hsl(0, 0%, 100%);
+    --main-dark-color: hsl(197, 100%, 20%);
+    --main-light-color: hsl(197, 100%, 90%);
+}
+
+* {
+    box-sizing: border-box;
+
+    font-family: Inter, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    margin: 0;
+    color: var(--text-dark-color);
+}
+
+body > *:not(main), main > * {
+    padding-left: max(10vw, calc((100vw - 2000px) / 2));
+    padding-right: max(10vw, calc((100vw - 2000px) / 2));
+}
+
+main > * {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+.code-styled-text {
+    font-family: 'Ubuntu Mono', 'Courier New', Courier, monospace;
+    font-size: 1.2em;
+    background-color: var(--main-light-color);
+    border-radius: 0.1875em;
+    padding: 0.125em 0.3125em;
+    margin: 0 0.1875em;
+}
+
+/* ----------------------------- Header ----------------------------- */
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    background-color: var(--main-dark-color);
+    color: var(--text-light-color);
+
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header a {
+    color: var(--text-light-color);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#menu-button {
+    font-size: 1.5rem;
+    line-height: normal;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    display: none;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+}
+
+#navbar ul {
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    gap: 50px;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+/* ------------------------ Welcome Section ------------------------- */
+
+#welcome-section {
+    min-height: 90vh;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+}
+
+.welcome-section-text h1, .welcome-section-text p {
+    margin: 0;
+}
+
+.welcome-section-text br {
+    display: none;
+}
+
+#welcome-section img {
+    aspect-ratio: 1 / 1;
+    max-width: 400px;
+    border: 5px solid var(--main-dark-color);
+    border-radius: 100%;
+    padding: 10px;
+}
+
+/* ------------------------- About Section -------------------------- */
+
+#about {
+    background: linear-gradient(90deg, var(--main-dark-color) 50%, transparent),
+                url('https://images.unsplash.com/photo-1579397256979-cc326aefe273');
+    background-position: right;
+    background-size: auto 100%;
+
+    color: var(--text-light-color);
+
+    min-height: 80vh;
+    padding-right: 50%;
+    padding-top: 20vh;
+}
+
+#about .code-styled-text {
+    color: var(--text-dark-color);
+}
+
+/* ------------------------ Projects Section ------------------------ */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px
+}
+
+.project {
+    background-color: var(--main-dark-color);
+    border: 5px solid var(--main-dark-color);
+    border-radius: 10px;
+
+    color: var(--text-light-color);
+    text-decoration: none;
+    font-weight: normal;
+
+    display: block;
+}
+
+.project:hover {
+    scale: 1.01;
+    transition: 0.25s;
+}
+
+.project:active {
+    scale: 1;
+    transition: 0.1s;
+}
+
+.project img {
+    width: 100%;
+    border-radius: calc(10px - 5px) calc(10px - 5px) 0 0;
+    background-color: var(--text-light-color);
+}
+
+.project-info {
+    padding: 30px 50px;
+}
+
+.project-info * {
+    margin: 0;
+}
+
+.project-info h3 {
+    text-underline-offset: 6px;
+    margin-bottom: 0.5rem;
+}
+
+/* ------------------------ Contact Section ------------------------- */
+
+#contact {
+    background-color: var(--main-dark-color);
+    color: var(--text-light-color);
+}
+
+#contact h2 {
+    margin-top: 0;
+}
+
+#contact .code-styled-text {
+    color: var(--text-dark-color);
+}
+
+.contacts-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+
+    margin-top: 30px;
+}
+
+.contacts-container > a {
+    width: 100%;
+    padding: 2.5rem 0;
+    border-radius: 10px;
+    
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    color: var(--text-light-color);
+}
+
+.contacts-container > a:hover {
+    scale: 1.05;
+    transition: 0.25s;
+}
+
+.contacts-container > a:active {
+    scale: 1;
+    transition: 0.1s;
+}
+
+#profile-link { background-color: #0a0a24; }
+#github-profile-link { background-color: #28ed9f; }
+#facebook-profile-link { background-color: #0b66ff; }
+#instagram-profile-link { background: linear-gradient(90deg, #833ab4, #fd1d1d, #fcb045); }
+
+.contacts-container > a > i {
+    line-height: inherit;
+    margin: auto 0.75rem auto 0;
+}
+
+.contacts-container > a > img {
+    height: 1em;
+    margin: auto 0.75rem auto 0;
+}
+
+/* ----------------------------- Footer ----------------------------- */
+
+footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    background-color: var(--text-dark-color);
+    color: var(--text-light-color);
+
+    text-align: end;
+}
+
+/* ----------------------- Responsive Design ------------------------ */
+
+@media only screen and (max-width: 1350px) {
+    .welcome-section-text br {
+        display: unset;
+    }
+
+    .welcome-section-text h1 .code-styled-text {
+        margin: 0;
+    }
+
+    .welcome-section-text p {
+        margin-top: 1rem;
+    }
+
+    .contacts-container > a {
+        font-size: 1.25rem;
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    h1 { font-size: 2.5rem; }
+
+    .projects-container {
+        gap: 40px;
+    }
+
+    .contacts-container {
+        gap: 40px;
+    }
+
+    .contacts-container > a {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    h1 { font-size: 3rem; }
+
+    #welcome-section {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .welcome-section-text br {
+        display: none;
+    }
+
+    .welcome-section-text h1 .code-styled-text {
+        margin: 0 0.1875em;
+    }
+
+    #about {
+        background: linear-gradient(0deg, var(--main-dark-color) 40%, transparent),
+                    url('https://images.unsplash.com/photo-1579397256979-cc326aefe273');
+        background-position: top;
+        background-size: 100% auto;
+
+        padding-right: max(10vw, calc((100vw - 2000px) / 2));
+        padding-top: 50px;
+        padding-bottom: 10vh;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }    
+}
+
+@media only screen and (max-width: 950px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacts-container > a {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    body > *:not(main), main > * {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .welcome-section-text br {
+        display: unset;
+    }
+
+    .welcome-section-text h1 .code-styled-text {
+        margin: 0;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    header {
+        flex-direction: column;
+        padding: 0 !important;
+    }
+
+    header > * {
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .supreme-header-elements {
+        display: flex;
+        justify-content: space-between;
+
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    #menu-button {
+        display: flex;
+    }
+
+    #menu-button:active {
+        scale: 0.95;
+        transition: 0.1s;
+    }
+
+    #navbar {
+        display: none;
+        
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        background-color: var(--main-light-color);
+    }
+
+    #navbar a {
+        color: var(--text-dark-color);
+    }
+
+    .project-info {
+        padding: 30px;
+    }
+
+    .contacts-container > a {
+        font-size: 1.25rem;
+    }
+
+    footer {
+        text-align: start;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    body > *:not(main):not(header), header > *, main > * {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    h1 { font-size: 2.5rem; }
+
+    #welcome-section img {
+        max-width: 90%;
+    }
+
+    .contacts-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contacts-container > a {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    h1 { font-size: 2rem; }
+}

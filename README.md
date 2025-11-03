@@ -8,11 +8,11 @@ Each project was built primarily using HTML and CSS, exploring different aspects
 📁 Projects
 -----------
 
-1. [Survey Form](https://vicmarinov.github.io/freeCodeCamp-Responsive-Web-Design/1\)%20Survey%20Form/)
-2. [Tribute Page](https://vicmarinov.github.io/freeCodeCamp-Responsive-Web-Design/2\)%20Tribute%20Page/)
-3. [Technical Documentation Page](https://vicmarinov.github.io/freeCodeCamp-Responsive-Web-Design/3\)%20Technical%20Documentation%20Page/)
-4. [Product Landing Page](https://vicmarinov.github.io/freeCodeCamp-Responsive-Web-Design/4\)%20Product%20Landing%20Page/)
-5. [Personal Portfolio Webpage](https://vicmarinov.github.io/freeCodeCamp-Responsive-Web-Design/5\)%20Personal%20Portfolio%20Webpage/)
+1. [Survey Form](https://vicmarinov.github.io/freeCodeCamp-Responsive-Web-Design/1.%20Survey%20Form/)
+2. [Tribute Page](https://vicmarinov.github.io/freeCodeCamp-Responsive-Web-Design/2.%20Tribute%20Page/)
+3. [Technical Documentation Page](https://vicmarinov.github.io/freeCodeCamp-Responsive-Web-Design/3.%20Technical%20Documentation%20Page/)
+4. [Product Landing Page](https://vicmarinov.github.io/freeCodeCamp-Responsive-Web-Design/4.%20Product%20Landing%20Page/)
+5. [Personal Portfolio Webpage](https://vicmarinov.github.io/freeCodeCamp-Responsive-Web-Design/5.%20Personal%20Portfolio%20Webpage/)
 
 🌱 About
 --------
